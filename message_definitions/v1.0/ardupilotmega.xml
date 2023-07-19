@@ -1635,6 +1635,30 @@
       <field type="float" name="rpm2">RPM Sensor2.</field>
     </message>
     <!-- ardupilot specific mavlink2 messages starting at 11000-->
+    <message id="10000" name="KEYEXCHANGE">
+      <description>Key Exchange Mechanism (ArduPilot version).</description>
+      <field type="uint8_t" name="seq">Sequence Number.</field>
+      <field type="uint8_t" name="chunk_start">Read from.</field>
+      <field type="uint8_t" name="chunk_end">Read to.</field>
+      <field type="uint8_t" name="more_data">More data to read.</field>
+      <field type="uint8_t[251]" name="data">Data</field>
+    </message>
+    <message id="10420" name="KEYEXCHANGEGCS">
+      <description>Key Exchange Mechanism (GCS version).</description>
+      <field type="uint8_t" name="seq">Sequence Number.</field>
+      <field type="uint8_t" name="chunk_start">Read from.</field>
+      <field type="uint8_t" name="chunk_end">Read to.</field>
+      <field type="uint8_t" name="more_data">More data to read.</field>
+      <field type="uint8_t[251]" name="data">Data</field>
+    </message>
+    <message id="10421" name="CAPSULE">
+      <description>KEM Capsule.</description>
+      <field type="uint8_t" name="seq">Sequence Number.</field>
+      <field type="uint8_t" name="chunk_start">Read from.</field>
+      <field type="uint8_t" name="chunk_end">Read to.</field>
+      <field type="uint8_t" name="more_data">More data to read.</field>
+      <field type="uint8_t[251]" name="data">Data</field>
+    </message>
     <message id="11000" name="DEVICE_OP_READ">
       <description>Read registers for a device.</description>
       <field type="uint8_t" name="target_system">System ID.</field>

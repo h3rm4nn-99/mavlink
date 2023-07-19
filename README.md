@@ -22,3 +22,26 @@ Key Links:
 MAVLink is licensed under the terms of the Lesser General Public License (version 3) of the Free Software Foundation (LGPLv3). The C-language version of MAVLink is a header-only library which is generated as MIT-licensed code. MAVLink can therefore be used without limits in any closed-source application without publishing the source code of the closed-source application.
 
 See the *COPYING* file for more info.
+
+# More information by @h3rm4nn-99
+
+# What's this?
+This repo contains a fork of the main MAVLink project. The key difference between this version and the upstream one consists in the addition of a novel **message definition file** that contains (as of now) three new messages:
+- `KEYEXCHANGE`: this message enables the UAV to share its **public key** with the GCS;
+- `KEYEXCHANGEGCS`: likewise, this message enables the GCS to share its **public key** with the UAV. This message has to be sent in response to the previous one;
+- `CAPSULE`: since this project deals with a KEM, we need to generate a **capsule** that contains the **session key** to be used with a **symmetric cipher**. This message enables the UAV to send the KEM capsule to the GCS.
+
+# How do I generate the library?
+
+To generate the new headers you can use the included `mavgenerate.py` script. This tools includes an easy-to-use GUI. 
+
+Assuming you have already cloned this repo and you have `python3` installed on your system, run this command in the repo root:
+
+```bash
+$ python3 mavgenerate.py
+```
+
+When the tool opens, point it to the [ardupilotmega.xml](message_definitions/v1.0/ardupilotmega.xml) file to use the custom definition and specify an output folder to store the newly-generated headers. Just make sure to specify **C** as the programming language and **2.0** as the wire protocol.
+
+# I'm too lazy, give me the headers already
+No ready-made headers are provided as of now. They will be added to this repository when the key exchange protocol becomes ready.

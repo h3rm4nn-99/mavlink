@@ -44,4 +44,4 @@ $ python3 mavgenerate.py
 When the tool opens, point it to the [ardupilotmega.xml](message_definitions/v1.0/ardupilotmega.xml) file to use the custom definition and specify an output folder to store the newly-generated headers. Just make sure to specify **C** as the programming language and **2.0** as the wire protocol.
 
 # I'm too lazy, give me the headers already
-No ready-made headers are provided as of now. They will be added to this repository when the key exchange protocol becomes ready.
+No ready-made headers are provided as of now. They will be added to a specific repository when the key exchange protocol becomes ready.

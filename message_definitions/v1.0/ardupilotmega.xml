@@ -1643,13 +1643,14 @@
       <field type="uint8_t" name="more_data">More data to read.</field>
       <field type="uint8_t[251]" name="data">Data</field>
     </message>
-    <message id="10420" name="KEYEXCHANGEGCS">
+    <message id="10420" name="KEYEXCHANGEGCSACK">
       <description>Key Exchange Mechanism (GCS version).</description>
       <field type="uint8_t" name="seq">Sequence Number.</field>
+      <field type="uint8_t" name="seq_ack">Sequence Number ACK.</field>
       <field type="uint8_t" name="chunk_start">Read from.</field>
       <field type="uint8_t" name="chunk_end">Read to.</field>
       <field type="uint8_t" name="more_data">More data to read.</field>
-      <field type="uint8_t[251]" name="data">Data</field>
+      <field type="uint8_t[250]" name="data">Data</field>
     </message>
     <message id="10421" name="CAPSULE">
       <description>KEM Capsule.</description>
@@ -1658,6 +1659,10 @@
       <field type="uint8_t" name="chunk_end">Read to.</field>
       <field type="uint8_t" name="more_data">More data to read.</field>
       <field type="uint8_t[251]" name="data">Data</field>
+    </message>
+    <message id="10422" name="CAPSULEACK">
+      <description>KEM Capsule ACK.</description>
+      <field type="uint8_t" name="seq">Next Sequence Number.</field>
     </message>
     <message id="11000" name="DEVICE_OP_READ">
       <description>Read registers for a device.</description>

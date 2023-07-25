@@ -34,15 +34,15 @@ This repo contains a fork of the main MAVLink project. The key difference betwee
 
 # How do I generate the library?
 
-~~To generate the new headers you can use the included `mavgenerate.py` script. This tools includes an easy-to-use GUI. 
+~~To generate the new headers you can use the included `mavgenerate.py` script. This tools includes an easy-to-use GUI.~~ 
 
-Assuming you have already cloned this repo and you have `python3` installed on your system, run this command in the repo root:
+~~Assuming you have already cloned this repo and you have `python3` installed on your system, run this command in the repo root:~~
 
 ```bash
 $ python3 mavgenerate.py
 ```
 
-When the tool opens, point it to the [ardupilotmega.xml](message_definitions/v1.0/ardupilotmega.xml) file to use the custom definition and specify an output folder to store the newly-generated headers. Just make sure to specify **C** as the programming language and **2.0** as the wire protocol.~~
+~~When the tool opens, point it to the [ardupilotmega.xml](message_definitions/v1.0/ardupilotmega.xml) file to use the custom definition and specify an output folder to store the newly-generated headers. Just make sure to specify **C** as the programming language and **2.0** as the wire protocol.~~
 
 Since this repository is a submodule of the **ardupilot** project, the entire library will be generated during its build process.
 

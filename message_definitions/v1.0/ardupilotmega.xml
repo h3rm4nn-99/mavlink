@@ -1641,7 +1641,7 @@
       <field type="uint8_t" name="chunk_start">Read from.</field>
       <field type="uint8_t" name="chunk_end">Read to.</field>
       <field type="uint8_t" name="more_data">More data to read.</field>
-      <field type="uint8_t[251]" name="data">Data</field>
+      <field type="uint8_t[200]" name="data">Data</field>
     </message>
     <message id="10420" name="KEYEXCHANGEGCSACK">
       <description>Key Exchange Mechanism (GCS version).</description>
@@ -1650,7 +1650,7 @@
       <field type="uint8_t" name="chunk_start">Read from.</field>
       <field type="uint8_t" name="chunk_end">Read to.</field>
       <field type="uint8_t" name="more_data">More data to read.</field>
-      <field type="uint8_t[250]" name="data">Data</field>
+      <field type="uint8_t[200]" name="data">Data</field>
     </message>
     <message id="10421" name="CAPSULE">
       <description>KEM Capsule.</description>
@@ -1658,7 +1658,7 @@
       <field type="uint8_t" name="chunk_start">Read from.</field>
       <field type="uint8_t" name="chunk_end">Read to.</field>
       <field type="uint8_t" name="more_data">More data to read.</field>
-      <field type="uint8_t[251]" name="data">Data</field>
+      <field type="uint8_t[192]" name="data">Data</field>
     </message>
     <message id="10422" name="CAPSULEACK">
       <description>KEM Capsule ACK.</description>
